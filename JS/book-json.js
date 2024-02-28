@@ -28,7 +28,7 @@ function makeRequest(index) {
                 }
             }
             
-            document.getElementById('content').innerHTML = newContent;
+            document.getElementById('details').innerHTML = newContent;
         }
     };
     
