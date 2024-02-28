@@ -32,7 +32,7 @@ function makeRequest(index) {
         }
     };
     
-    xhr.open('GET', '../data/book-data.json', true);
+    xhr.open('GET', 'data/book-data.json', true);
     
     xhr.send(null);
 }
