@@ -51,7 +51,7 @@ function changeOp () {
 }
 
 document.getElementById("don-quixote-img").addEventListener("click", function() {
-    makeRequest1();
+    makeRequest();
     changeOp();
     document.getElementById("don-quixote-img").style.opacity = 1;
 });
