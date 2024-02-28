@@ -1,4 +1,4 @@
-function makeRequest() {
+function makeRequest(path) {
     var xhr = new XMLHttpRequest();
     
     xhr.onload = function() {
@@ -7,7 +7,7 @@ function makeRequest() {
         }
     };
     
-    xhr.open('GET', '../data/cervantes-data.html', true);
+    xhr.open('GET', path, true);
     
     xhr.send(null);
 }
@@ -23,17 +23,19 @@ function changeOp () {
 }
 
 document.getElementById("don-quixote-img").addEventListener("click", function() {
-    makeRequest();
+    makeRequest('../data/cervantes-data.html');
     changeOp();
     document.getElementById("don-quixote-img").style.opacity = 1;
 });
 
 document.getElementById("two-cities-img").addEventListener("click", function() {
+    makeRequest('../data/dickens-data.html');
     changeOp();
     document.getElementById("two-cities-img").style.opacity = 1;
 });
 
 document.getElementById("lotr-img").addEventListener("click", function() {
+    makeRequest('../data/tolkien-data.html');
     changeOp();
     document.getElementById("lotr-img").style.opacity = 1;
 });
