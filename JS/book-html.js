@@ -3,11 +3,11 @@ function makeRequest() {
     
     xhr.onload = function() {
         if (xhr.status === 200) {
-            document.getElementById('ajax').innerHTML = xhr.responseText;
+            document.getElementById('details').innerHTML = xhr.responseText;
         }
     };
     
-    xhr.open('GET', 'data/data.html', true);
+    xhr.open('GET', '../cervantes-data.html', true);
     
     xhr.send(null);
 }
@@ -21,6 +21,19 @@ function changeOp () {
     city.style.opacity = '0.5';
     ring.style.opacity = '0.5';
 }
+
 document.getElementById("don-quixote-img").addEventListener("click", function() {
-    don.style.opacity = '0.5';
+    makeRequest();
+    changeOp();
+    document.getElementById("don-quixote-img").style.opacity = 1;
+});
+
+document.getElementById("two-cities-img").addEventListener("click", function() {
+    changeOp();
+    document.getElementById("two-cities-img").style.opacity = 1;
+});
+
+document.getElementById("lotr-img").addEventListener("click", function() {
+    changeOp();
+    document.getElementById("lotr-img").style.opacity = 1;
 });
