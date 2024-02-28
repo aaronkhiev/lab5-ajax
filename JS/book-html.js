@@ -7,7 +7,7 @@ function makeRequest() {
         }
     };
     
-    xhr.open('GET', '../cervantes-data.html', true);
+    xhr.open('GET', '../data/cervantes-data.html', true);
     
     xhr.send(null);
 }
