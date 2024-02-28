@@ -54,6 +54,7 @@ document.getElementById("don-quixote-img").addEventListener("click", function() 
     makeRequest();
     changeOp();
     document.getElementById("don-quixote-img").style.opacity = 1;
+    deselect
 });
 
 document.getElementById("two-cities-img").addEventListener("click", function() {
