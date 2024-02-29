@@ -7,7 +7,7 @@ function makeRequest(index) {
             
             var newContent = '';
             
-            for (var i = 0; i < responseObject.content.length; i++) {
+            for (var i = 0; i < 3; i++) {
                 if (index == 0) {
                     newContent += '<h3>' + responseObject.content[0].title + '<h3>';
                     newContent += '<p>' + responseObject.content[0].author + '<p>'
@@ -27,7 +27,6 @@ function makeRequest(index) {
                     newContent += '<p>' + responseObject.content[2].description + '<p>';
                 }
             }
-            
             document.getElementById('details').innerHTML = newContent;
         }
     };
